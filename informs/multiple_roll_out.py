@@ -317,9 +317,9 @@ f=open(os.path.join(path, '%d'%randomSeed+"results.txt"),'w')
 f.close()
 
 with open(os.path.join(path,'%d'%randomSeed+"results.txt"),"a") as f:
-    np.savetxt(f, point_chosen)
-    np.savetxt(f, one_stage)
+    np.savetxt(f, np.array(point_chosen))
+    np.savetxt(f, np.array(one_stage).reshape(1))
     
-    np.savetxt(f,new_sol)
-    np.savetxt(f,oldPoint)
-    np.savetxt(f, two_stages)
+    np.savetxt(f,np.array(new_sol))
+    np.savetxt(f,np.array(oldPoint))
+    np.savetxt(f, np.array(two_stages).reshape(1))
