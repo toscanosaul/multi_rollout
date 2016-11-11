@@ -261,7 +261,7 @@ vector_mu_1 = np.zeros(len(new_indexes))
 for i in range(len(vector_mu_1)):
     vector_mu_1[i] = mu_1(new_indexes[i][1] ,oldPoint ,old_obs)
     
-new_sol = new_indexes[np.argmax(vector_mu_1)]
+new_sol = new_indexes[np.argmax(vector_mu_1)][1]
 
 
 #####all stations in one step
